@@ -12,10 +12,10 @@ quest = { "quests":["сколько лет",
 to_json = {'test': quest}
 
 
-with open('question.json', 'w') as f:
+with open('test/tests1.json', 'w') as f:
     json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
 
-with open('question.json') as f:
+with open('test/tests1.json') as f:
     kek = f.read()
     print(kek)
 
@@ -23,7 +23,7 @@ with open('question.json') as f:
 
 # import json
 #
-# with open('question.json') as f:
+# with open('tests1.json') as f:
 #     templates = json.load(f)
 #
 # print(templates)

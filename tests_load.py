@@ -9,7 +9,7 @@ for x in range(a):
     question.append(x)
     x = list(input("Введите отвты: \n").split('.'))
     answer.append(x)
-    x = int(input("Введите правильный ответ:"))
+    x = input("Введите правильный ответ:")
     true_answer.append(x)
 print(question)
 print(answer)
@@ -22,7 +22,7 @@ quest = {"quests":question,
 
 to_json = {'test': quest}
 
-with open('question.json', 'w') as f:
+with open('test/tests1.json', 'w') as f:
     json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
 
 

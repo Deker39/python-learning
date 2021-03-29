@@ -1,0 +1,14 @@
+QPushButton{
+	font: 12pt "Gadugi";
+	color:#006080;
+	background-color:#ccf2ff;
+	border:none;
+}
+QPushButton:hover{
+	color:#ffd9b3;
+	background-color:#006080;
+}
+QPushButton:pressed{
+	color:#ff9933;
+	background-color:#006080;
+}
