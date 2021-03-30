@@ -2,25 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20d61652-4fea-46f4-9433-7b2e0a302fd1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ccs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/tests1.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/win2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/example.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/json_exxample.py" beforeDir="false" afterPath="$PROJECT_DIR$/json_exxample.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/question.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/tests1.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/tests2.json" beforeDir="false" afterPath="$PROJECT_DIR$/tests1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/win1_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win1_contrl.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test_read.py" beforeDir="false" afterPath="$PROJECT_DIR$/test_read.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests_load.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests_load.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled_add_quest.ui" beforeDir="false" afterPath="$PROJECT_DIR$/untitled_add_quest.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win1.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win1_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win1_contrl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win21.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win2_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win2_contrl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win3.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/win3_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win3_contrl.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,14 +162,56 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bigti\Desktop\python_learning" />
       <recent name="C:\Users\bigti\Desktop\python_learning\test" />
       <recent name="C:\Users\bigti\Desktop\python_learning\school_project" />
       <recent name="C:\Users\bigti\Desktop\python_learning\maksim_samuchenko" />
       <recent name="C:\Users\bigti\Desktop\python_learning\vlad_derkach" />
-      <recent name="C:\Users\bigti\Desktop\python_learning\maksim_derkach" />
     </key>
   </component>
   <component name="RunManager" selected="Python.win1_contrl (1)">
+    <configuration name="test_read" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kek" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_read.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="tests_load" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kek" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests_load.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="win1_contrl (1)" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kek" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -202,27 +233,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="win1_contrl" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="kek" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="C:\Users\bigti\Desktop\python_learning\test\win1_contrl.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="win2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kek" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -236,27 +246,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="C:\Users\bigti\Desktop\python_learning\test\win2.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="win2_contrl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="kek" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/win2_contrl.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -289,10 +278,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.win1_contrl (1)" />
+        <item itemvalue="Python.tests_load" />
+        <item itemvalue="Python.test_read" />
         <item itemvalue="Python.win3_contrl" />
         <item itemvalue="Python.win2" />
-        <item itemvalue="Python.win2_contrl" />
-        <item itemvalue="Python.win1_contrl" />
       </list>
     </recent_temporary>
   </component>

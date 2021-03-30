@@ -1,7 +1,7 @@
 import json
 from termcolor import colored, cprint
 
-with open('test/tests1.json') as f:
+with open('tests1.json') as f:
     templates = json.load(f)
 
 new_x = []

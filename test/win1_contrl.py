@@ -1,5 +1,6 @@
 import sys
 import json
+import os
 from PyQt5 import QtCore, QtGui, QtWidgets
 from win1 import  Ui_Win1
 from win2 import  Ui_Win2
@@ -36,9 +37,23 @@ def pushbutton_one():
 
         to_json = {'test': quest}
 
-        with open('tests2.json', 'w') as f:
-            json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
-        print(quest)
+
+        if os.path.isfile('tests1.json') and os.access('tests1.json',os.R_OK):
+            with open('tests1.json') as f:
+                data = json.load(f)
+
+            data['test']['quests'].extend(question)
+            data['test']['answer'].extend(answer)
+            data['test']['true_answer'].extend(true_answer)
+            print(data)
+
+            with open('tests1.json', 'w') as f:
+                json.dump(data, f,sort_keys=True, indent=3,ensure_ascii=False )
+
+        else:
+            with open('tests1.json', 'w') as f:
+                json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
+
 
     def pushbutton_return_one():
         input_question()
