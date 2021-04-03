@@ -26,11 +26,16 @@ def pushbutton_one():
     Dialog.close()
     Dialog4.show()
 
-    def pushbutton_ok():
+    def input_chois_test():
         chois_test = ui1.edit_test.text()
         print(chois_test)
+        return  chois_test
+
+    def pushbutton_ok():
+        input_chois_test()
         Dialog4.close()
         Dialog.show()
+
 
     def pushbutton_return_one_ok():
         pushbutton_ok()
@@ -65,12 +70,12 @@ def pushbutton_one():
 
         to_json = {'test': quest}
 
-        json_file = '{0}.json'.format(chois_test)
+        json_file = '{0}.json'.format(input_chois_test())
         print(json_file)
 
 
-        if os.path.isfile('tests1.json') and os.access('tests1.json',os.R_OK):
-            with open('tests1.json') as f:
+        if os.path.isfile(json_file) and os.access(json_file,os.R_OK):
+            with open(json_file) as f:
                 data = json.load(f)
 
             data['test']['quests'].extend(question)
@@ -78,11 +83,11 @@ def pushbutton_one():
             data['test']['true_answer'].extend(true_answer)
             print(data)
 
-            with open('tests1.json', 'w') as f:
+            with open(json_file, 'w') as f:
                 json.dump(data, f,sort_keys=True, indent=3,ensure_ascii=False )
 
         else:
-            with open('tests1.json', 'w') as f:
+            with open(json_file, 'w') as f:
                 json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
 
     def pushbutton_return_one():

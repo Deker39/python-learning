@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20d61652-4fea-46f4-9433-7b2e0a302fd1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/test/exampel.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/win4.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/untitled_chois.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/tests1.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/win1.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/win1_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win1_contrl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/win3_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win3_contrl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/untitled.ui" beforeDir="false" afterPath="$PROJECT_DIR$/untitled.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -307,6 +300,14 @@
       <option name="presentableId" value="Default" />
       <updated>1605379697129</updated>
     </task>
+    <task id="LOCAL-00001" summary="добавил одно окно и подклюяил его&#10;но не могу предела Chois_tets в дуругую функцию">
+      <created>1617452443911</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1617452443911</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView">
@@ -376,17 +377,8 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/python-learning" />
     </ignored-roots>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/test/win1_contrl.py</url>
-          <line>67</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="добавил одно окно и подклюяил его&#10;но не могу предела Chois_tets в дуругую функцию" />
+    <option name="LAST_COMMIT_MESSAGE" value="добавил одно окно и подклюяил его&#10;но не могу предела Chois_tets в дуругую функцию" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/The Antennae Galaxies in Collision_2020-12-03.jpg" />
