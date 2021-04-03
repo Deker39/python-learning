@@ -2,9 +2,13 @@ import sys
 import json
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import (QWidget, QPushButton, QLineEdit,
+                             QInputDialog, QApplication)
+
 from win1 import  Ui_Win1
 from win2 import  Ui_Win2
 from  win3 import  Ui_Win3
+from  win4 import  Ui_Win4
 
 app = QtWidgets.QApplication(sys.argv)
 Dialog = QtWidgets.QDialog()
@@ -12,14 +16,38 @@ ui = Ui_Win1()
 ui.setupUi(Dialog)
 Dialog.show()
 
-
 def pushbutton_one():
     global Dialog1
+    global Dialog4
+    global chois_test
+    Dialog4 = QtWidgets.QDialog()
+    ui1 = Ui_Win4()
+    ui1.setupUi(Dialog4)
+    Dialog.close()
+    Dialog4.show()
+
+    def pushbutton_ok():
+        chois_test = ui1.edit_test.text()
+        print(chois_test)
+        Dialog4.close()
+        Dialog.show()
+
+    def pushbutton_return_one_ok():
+        pushbutton_ok()
+        Dialog4.close()
+        Dialog1.show()
+
+    def pushbutton_return_one_cancle():
+        # pushbutton_ok()
+        Dialog4.close()
+        Dialog.show()
+
     Dialog1 = QtWidgets.QDialog()
     ui = Ui_Win2()
     ui.setupUi(Dialog1)
-    Dialog.close()
-    Dialog1.show()
+
+    ui1.ok_button.clicked.connect(pushbutton_return_one_ok)
+    ui1.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
 
     def input_question():
@@ -36,6 +64,9 @@ def pushbutton_one():
                  }
 
         to_json = {'test': quest}
+
+        json_file = '{0}.json'.format(chois_test)
+        print(json_file)
 
 
         if os.path.isfile('tests1.json') and os.access('tests1.json',os.R_OK):
@@ -54,8 +85,8 @@ def pushbutton_one():
             with open('tests1.json', 'w') as f:
                 json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
 
-
     def pushbutton_return_one():
+
         input_question()
         Dialog1.close()
         Dialog.show()
@@ -92,8 +123,8 @@ def pushbutton_two():
     ui.pushButton.clicked.connect(pushbutton_return_one)
 
 
-ui.pushButton_1.clicked.connect(pushbutton_one)
-ui.pushButton_2.clicked.connect(pushbutton_two)
-# ui.pushButton_3.clicked.connect(pushbutton_three)
+ui.add_button.clicked.connect(pushbutton_one)
+ui.decide_button.clicked.connect(pushbutton_two)
+# ui.look_button.clicked.connect(pushbutton_three)
 
 sys.exit(app.exec_())

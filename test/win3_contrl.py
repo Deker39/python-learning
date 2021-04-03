@@ -8,7 +8,7 @@ Dialog = QtWidgets.QDialog()
 ui = Ui_Win3()
 ui.setupUi(Dialog)
 
-with open('tests2.json') as f:
+with open('tests1.json') as f:
     templates = json.load(f)
 
 #Все закинуть в функцию и подлючить к кнопке
@@ -18,9 +18,9 @@ with open('tests2.json') as f:
 # и результаты запистаь тоже в джисон
 
 quest = templates["test"]["quests"]
-ui.label_2.setText(str(quest[0]))
+ui.label_2.setText(str(quest[3]))
 
-answer = templates["test"]['answer'][0]
+answer = templates["test"]['answer'][3]
 ui.radioButton.setText(str(answer[1]))
 ui.radioButton_2.setText(str(answer[0]))
 ui.radioButton_3.setText(str(answer[2]))
