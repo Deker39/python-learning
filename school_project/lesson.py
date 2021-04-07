@@ -1,4 +1,5 @@
 from math import*
+
 # thislist = ["apple", "banana", "cherry","kiwi","tomato","pineapple"]#6
 # for x in range(len(thislist)):#6 0...6 if x==6:
 #     print(x ,"-", thislist[x])
@@ -565,15 +566,35 @@ from math import*
 # a =5,456,3,22,100
 # print(sum(a))
 
+#
+# def string_revers(str1):
+#
+#   rev_str1=''
+#   index = len(str1)
+#   while index > 0:
+#     rev_str1 += str1[index - 1]
+#     index -= 1
+#   return  str1, rev_str1
+#
+#
+# print(string_revers("hellow, world"))
+import json
 
-def string_revers(str1):
-
-  rev_str1=''
-  index = len(str1)
-  while index > 0:
-    rev_str1 += str1[index - 1]
-    index -= 1
-  return  str1, rev_str1
 
 
-print(string_revers("hellow, world"))
+with open('tests123.json') as f:
+  templates = json.load(f)
+
+# while x <= len((templates["test"]["quests"])):
+quest = iter(templates["test"]["quests"])
+answer = iter(templates["test"]['answer'])
+print(next(answer))
+print(next(answer))
+print(next(answer))
+print(next(quest))
+# ui3.label_2.setText(quest[x])
+# print(quest[x])
+# answer = templates["test"]['answer'][x]
+# ui3.radioButton.setText(str(answer[x]))
+# ui3.radioButton_2.setText(str(answer[x+1]))
+# ui3.radioButton_3.setText(str(answer[x+2]))
