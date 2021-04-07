@@ -10,6 +10,8 @@ from win2 import  Ui_Win2
 from  win3 import  Ui_Win3
 from  win4 import  Ui_Win4
 
+
+
 app = QtWidgets.QApplication(sys.argv)
 Dialog1 = QtWidgets.QDialog()
 ui1 = Ui_Win1()
@@ -108,7 +110,6 @@ def pushbutton_two():
     global Dialog3
     global Dialog4
     global chois_test
-    x = 0
 
     #  запуск вин3
     Dialog3 = QtWidgets.QDialog()
@@ -126,19 +127,19 @@ def pushbutton_two():
     #Сделат так чтобы выводило с json
     # и все пустить через for
     # Здесь нихуя не работает
-
-    def output():
-        json_file = '{0}.json'.format(input_chois_test())
-        with open(json_file) as f:
-            templates = json.load(f)
-        # while x <= len((templates["test"]["quests"])):
-        quest = iter(templates["test"]["quests"])
-        # ui3.label_2.setText(quest[x])
-        print(quest)
-        answer = templates["test"]['answer'][x]
-        ui3.radioButton.setText(str(answer[x]))
-        ui3.radioButton_2.setText(str(answer[x+1]))
-        ui3.radioButton_3.setText(str(answer[x+2]))
+    #
+    # def output():
+    #     json_file = '{0}.json'.format(input_chois_test())
+    #     with open(json_file) as f:
+    #         templates = json.load(f)
+    #     # while x <= len((templates["test"]["quests"])):
+    #     quest = iter(templates["test"]["quests"])
+    #     # ui3.label_2.setText(quest[x])
+    #     print(quest)
+    #     answer = templates["test"]['answer'][x]
+    #     ui3.radioButton.setText(str(answer[x]))
+    #     ui3.radioButton_2.setText(str(answer[x+1]))
+    #     ui3.radioButton_3.setText(str(answer[x+2]))
 
             # ui.label_2.setText(text)
         # ui3.pushButton.clicked.connect(on_clik(x))
@@ -164,15 +165,20 @@ def pushbutton_two():
     ui4.ok_button.clicked.connect(pushbutton_return_one_ok)
     ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
-    # def on_click(x):
-    #     x = x +1
-    #     print(x)
-    #     return x
+    def on_click(i):
+            i = i +1
+            print("i:",i)
 
+
+    x = 1
     def pushbutton_return_next():
-        output()
-        # on_click(x)
-        # output(on_click())
+        y = on_click(x)
+        print("x: ",y)
+
+
+
+
+        # output()
 
         # Dialog3.close()
         # Dialog1.show()

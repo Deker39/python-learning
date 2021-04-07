@@ -582,19 +582,26 @@ import json
 
 
 
-with open('tests123.json') as f:
-  templates = json.load(f)
-
-# while x <= len((templates["test"]["quests"])):
-quest = iter(templates["test"]["quests"])
-answer = iter(templates["test"]['answer'])
-print(next(answer))
-print(next(answer))
-print(next(answer))
-print(next(quest))
+# with open('tests123.json') as f:
+#   templates = json.load(f)
+#
+# # while x <= len((templates["test"]["quests"])):
+# quest = iter(templates["test"]["quests"])
+# answer = iter(templates["test"]['answer'])
+# print(next(answer))
+# print(next(answer))
+# print(next(answer))
+# print(next(quest))
 # ui3.label_2.setText(quest[x])
 # print(quest[x])
 # answer = templates["test"]['answer'][x]
 # ui3.radioButton.setText(str(answer[x]))
 # ui3.radioButton_2.setText(str(answer[x+1]))
 # ui3.radioButton_3.setText(str(answer[x+2]))
+
+def on_click(i):
+  i = i + 1
+  print("i:",i)
+x = 11
+on_click(x)
+print("x: ",x)
