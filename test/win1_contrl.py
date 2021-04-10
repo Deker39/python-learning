@@ -164,36 +164,16 @@ def pushbutton_two():
         # print(on_click(x))
         quest = templates["test"]["quests"]
         # print(len(templates["test"]["quests"]))
-        # if x <= len(templates["test"]["quests"]):
-        ui3.label_2.setText(quest[x])
-        answer = templates["test"]['answer'][x]
-        ui3.radioButton.setText(str(answer[0]))
-        ui3.radioButton_2.setText(str(answer[1]))
-        ui3.radioButton_3.setText(str(answer[2]))
-        # else:
-        #     Dialog3.close()
-        #     Dialog1.show()
+        if x >= len(templates["test"]["quests"]):
+            Dialog3.close()
+            Dialog1.show()
+        else:
 
-
-        # print(quest)
-        # answer = templates["test"]['answer'][x]
-        # ui3.radioButton.setText(str(answer[x]))
-        # ui3.radioButton_2.setText(str(answer[x+1]))
-        # ui3.radioButton_3.setText(str(answer[x+2]))
-        # y -=2
-
-
-    def on_click():
-        global x
-        x += 1
-        print("x:",x)
-        # return x
-
-
-    # x = 0
-    # def pushbutton_return_next():
-        # output()
-
+            ui3.label_2.setText(quest[x])
+            answer = templates["test"]['answer'][x]
+            ui3.radioButton.setText(str(answer[0]))
+            ui3.radioButton_2.setText(str(answer[1]))
+            ui3.radioButton_3.setText(str(answer[2]))
 
     ui3.pushButton.clicked.connect(output)
 
