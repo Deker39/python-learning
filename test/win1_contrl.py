@@ -137,6 +137,7 @@ def pushbutton_two():
     def pushbutton_return_one_ok():
         Dialog4.close()
         Dialog3.show()
+        output()
         # output()
 
     # Нажатие "cancel" возрат на первое окно
@@ -149,26 +150,22 @@ def pushbutton_two():
     ui4.ok_button.clicked.connect(pushbutton_return_one_ok)
     ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
-    #Сделат так чтобы выводило с json
-    # и все пустить через for
-    # Здесь нихуя не работает
-    #
+
     def output():
         json_file = '{0}.json'.format(input_chois_test())
         with open(json_file) as f:
             templates = json.load(f)
-
+        # счетчик
         global x
         x += 1
         print('x:',x )
-        # print(on_click(x))
+
         quest = templates["test"]["quests"]
         # print(len(templates["test"]["quests"]))
         if x >= len(templates["test"]["quests"]):
             Dialog3.close()
             Dialog1.show()
         else:
-
             ui3.label_2.setText(quest[x])
             answer = templates["test"]['answer'][x]
             ui3.radioButton.setText(str(answer[0]))
