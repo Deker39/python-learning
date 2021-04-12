@@ -14,7 +14,10 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Calcalator(object):
     def setupUi(self, Calcalator):
         Calcalator.setObjectName("Calcalator")
-        Calcalator.resize(381, 450)
+        Calcalator.setFixedSize(381, 450)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("png-clipart-macos-app-icons-calculator.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Calcalator.setWindowIcon(icon)
         palette = QtGui.QPalette()
         brush = QtGui.QBrush(QtGui.QColor(0, 0, 0))
         brush.setStyle(QtCore.Qt.SolidPattern)
@@ -162,7 +165,7 @@ class Ui_Calcalator(object):
         palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.PlaceholderText, brush)
         Calcalator.setPalette(palette)
         Calcalator.setStyleSheet("\n"
-"")
+                                 "")
         self.gridLayoutWidget = QtWidgets.QWidget(Calcalator)
         self.gridLayoutWidget.setGeometry(QtCore.QRect(0, 98, 379, 351))
         self.gridLayoutWidget.setObjectName("gridLayoutWidget")
@@ -185,14 +188,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_two.setFont(font)
         self.pushButton_two.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                          "{\n"
+                                          "    border: 0px solid gray;\n"
+                                          "}\n"
+                                          "QPushButton:pressed\n"
+                                          "{\n"
+                                          "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                          "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                          "}R")
         self.pushButton_two.setObjectName("pushButton_two")
         self.qwe.addWidget(self.pushButton_two, 3, 1, 1, 1)
         self.pushButton_plus = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -208,14 +211,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_plus.setFont(font)
         self.pushButton_plus.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                           "{\n"
+                                           "    border: 0px solid gray;\n"
+                                           "}\n"
+                                           "QPushButton:pressed\n"
+                                           "{\n"
+                                           "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                           "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                           "}R")
         self.pushButton_plus.setObjectName("pushButton_plus")
         self.qwe.addWidget(self.pushButton_plus, 1, 3, 1, 1)
         self.pushButton_clear = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -231,14 +234,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_clear.setFont(font)
         self.pushButton_clear.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1#dadbde )\n"
-"}R")
+                                            "{\n"
+                                            "    border: 0px solid gray;\n"
+                                            "}\n"
+                                            "QPushButton:pressed\n"
+                                            "{\n"
+                                            "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                            "stop:0 #f6f7fa, stop:1#dadbde )\n"
+                                            "}R")
         self.pushButton_clear.setObjectName("pushButton_clear")
         self.qwe.addWidget(self.pushButton_clear, 0, 0, 1, 1)
         self.pushButton_five = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -254,14 +257,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_five.setFont(font)
         self.pushButton_five.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                           "{\n"
+                                           "    border: 0px solid gray;\n"
+                                           "}\n"
+                                           "QPushButton:pressed\n"
+                                           "{\n"
+                                           "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                           "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                           "}R")
         self.pushButton_five.setObjectName("pushButton_five")
         self.qwe.addWidget(self.pushButton_five, 2, 1, 1, 1)
         self.pushButton_equals = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -277,14 +280,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_equals.setFont(font)
         self.pushButton_equals.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0  #ffd1b3, stop:1 #ff751a)\n"
-"}R")
+                                             "{\n"
+                                             "    border: 0px solid gray;\n"
+                                             "}\n"
+                                             "QPushButton:pressed\n"
+                                             "{\n"
+                                             "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                             "stop:0  #ffd1b3, stop:1 #ff751a)\n"
+                                             "}R")
         self.pushButton_equals.setObjectName("pushButton_equals")
         self.qwe.addWidget(self.pushButton_equals, 4, 2, 1, 1)
         self.pushButton_seven = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -300,14 +303,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_seven.setFont(font)
         self.pushButton_seven.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                            "{\n"
+                                            "    border: 0px solid gray;\n"
+                                            "}\n"
+                                            "QPushButton:pressed\n"
+                                            "{\n"
+                                            "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                            "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                            "}R")
         self.pushButton_seven.setObjectName("pushButton_seven")
         self.qwe.addWidget(self.pushButton_seven, 1, 0, 1, 1)
         self.pushButton_nine = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -323,14 +326,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_nine.setFont(font)
         self.pushButton_nine.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                           "{\n"
+                                           "    border: 0px solid gray;\n"
+                                           "}\n"
+                                           "QPushButton:pressed\n"
+                                           "{\n"
+                                           "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                           "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                           "}R")
         self.pushButton_nine.setObjectName("pushButton_nine")
         self.qwe.addWidget(self.pushButton_nine, 1, 2, 1, 1)
         self.pushButton_percent = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -346,14 +349,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_percent.setFont(font)
         self.pushButton_percent.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                              "{\n"
+                                              "    border: 0px solid gray;\n"
+                                              "}\n"
+                                              "QPushButton:pressed\n"
+                                              "{\n"
+                                              "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                              "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                              "}R")
         self.pushButton_percent.setObjectName("pushButton_percent")
         self.qwe.addWidget(self.pushButton_percent, 0, 3, 1, 1)
         self.pushButton_dot = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -369,14 +372,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_dot.setFont(font)
         self.pushButton_dot.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                          "{\n"
+                                          "    border: 0px solid gray;\n"
+                                          "}\n"
+                                          "QPushButton:pressed\n"
+                                          "{\n"
+                                          "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                          "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                          "}R")
         self.pushButton_dot.setObjectName("pushButton_dot")
         self.qwe.addWidget(self.pushButton_dot, 4, 0, 1, 1)
         self.pushButton_multiply = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -392,14 +395,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_multiply.setFont(font)
         self.pushButton_multiply.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                               "{\n"
+                                               "    border: 0px solid gray;\n"
+                                               "}\n"
+                                               "QPushButton:pressed\n"
+                                               "{\n"
+                                               "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                               "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                               "}R")
         self.pushButton_multiply.setObjectName("pushButton_multiply")
         self.qwe.addWidget(self.pushButton_multiply, 3, 3, 1, 1)
         self.pushButton_plus_minus = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -415,14 +418,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_plus_minus.setFont(font)
         self.pushButton_plus_minus.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                                 "{\n"
+                                                 "    border: 0px solid gray;\n"
+                                                 "}\n"
+                                                 "QPushButton:pressed\n"
+                                                 "{\n"
+                                                 "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                                 "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                                 "}R")
         self.pushButton_plus_minus.setObjectName("pushButton_plus_minus")
         self.qwe.addWidget(self.pushButton_plus_minus, 0, 2, 1, 1)
         self.pushButton_three = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -438,14 +441,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_three.setFont(font)
         self.pushButton_three.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                            "{\n"
+                                            "    border: 0px solid gray;\n"
+                                            "}\n"
+                                            "QPushButton:pressed\n"
+                                            "{\n"
+                                            "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                            "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                            "}R")
         self.pushButton_three.setObjectName("pushButton_three")
         self.qwe.addWidget(self.pushButton_three, 3, 2, 1, 1)
         self.pushButton_one = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -461,14 +464,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_one.setFont(font)
         self.pushButton_one.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                          "{\n"
+                                          "    border: 0px solid gray;\n"
+                                          "}\n"
+                                          "QPushButton:pressed\n"
+                                          "{\n"
+                                          "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                          "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                          "}R")
         self.pushButton_one.setObjectName("pushButton_one")
         self.qwe.addWidget(self.pushButton_one, 3, 0, 1, 1)
         self.pushButton_divided = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -484,14 +487,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_divided.setFont(font)
         self.pushButton_divided.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                              "{\n"
+                                              "    border: 0px solid gray;\n"
+                                              "}\n"
+                                              "QPushButton:pressed\n"
+                                              "{\n"
+                                              "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                              "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                              "}R")
         self.pushButton_divided.setObjectName("pushButton_divided")
         self.qwe.addWidget(self.pushButton_divided, 4, 3, 1, 1)
         self.pushButton_minus = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -507,14 +510,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_minus.setFont(font)
         self.pushButton_minus.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                            "{\n"
+                                            "    border: 0px solid gray;\n"
+                                            "}\n"
+                                            "QPushButton:pressed\n"
+                                            "{\n"
+                                            "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                            "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                            "}R")
         self.pushButton_minus.setObjectName("pushButton_minus")
         self.qwe.addWidget(self.pushButton_minus, 2, 3, 1, 1)
         self.pushButton_six = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -530,14 +533,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_six.setFont(font)
         self.pushButton_six.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                          "{\n"
+                                          "    border: 0px solid gray;\n"
+                                          "}\n"
+                                          "QPushButton:pressed\n"
+                                          "{\n"
+                                          "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                          "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                          "}R")
         self.pushButton_six.setObjectName("pushButton_six")
         self.qwe.addWidget(self.pushButton_six, 2, 2, 1, 1)
         self.pushButton_zero = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -553,14 +556,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_zero.setFont(font)
         self.pushButton_zero.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                           "{\n"
+                                           "    border: 0px solid gray;\n"
+                                           "}\n"
+                                           "QPushButton:pressed\n"
+                                           "{\n"
+                                           "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                           "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                           "}R")
         self.pushButton_zero.setObjectName("pushButton_zero")
         self.qwe.addWidget(self.pushButton_zero, 4, 1, 1, 1)
         self.pushButton_eight = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -576,14 +579,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_eight.setFont(font)
         self.pushButton_eight.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                            "{\n"
+                                            "    border: 0px solid gray;\n"
+                                            "}\n"
+                                            "QPushButton:pressed\n"
+                                            "{\n"
+                                            "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                            "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                            "}R")
         self.pushButton_eight.setObjectName("pushButton_eight")
         self.qwe.addWidget(self.pushButton_eight, 1, 1, 1, 1)
         self.pushButton_four = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -599,14 +602,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_four.setFont(font)
         self.pushButton_four.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                           "{\n"
+                                           "    border: 0px solid gray;\n"
+                                           "}\n"
+                                           "QPushButton:pressed\n"
+                                           "{\n"
+                                           "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                           "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                           "}R")
         self.pushButton_four.setObjectName("pushButton_four")
         self.qwe.addWidget(self.pushButton_four, 2, 0, 1, 1)
         self.pushButton_del = QtWidgets.QPushButton(self.gridLayoutWidget)
@@ -622,14 +625,14 @@ class Ui_Calcalator(object):
         font.setWeight(50)
         self.pushButton_del.setFont(font)
         self.pushButton_del.setStyleSheet("QPushButton\n"
-"{\n"
-"    border: 0px solid gray;\n"
-"}\n"
-"QPushButton:pressed\n"
-"{\n"
-"    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
-"stop:0 #f6f7fa, stop:1 #dadbde)\n"
-"}R")
+                                          "{\n"
+                                          "    border: 0px solid gray;\n"
+                                          "}\n"
+                                          "QPushButton:pressed\n"
+                                          "{\n"
+                                          "    background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,\n"
+                                          "stop:0 #f6f7fa, stop:1 #dadbde)\n"
+                                          "}R")
         self.pushButton_del.setObjectName("pushButton_del")
         self.qwe.addWidget(self.pushButton_del, 0, 1, 1, 1)
         self.label_output = QtWidgets.QLabel(Calcalator)
@@ -644,12 +647,12 @@ class Ui_Calcalator(object):
         font.setPointSize(26)
         self.label_output.setFont(font)
         self.label_output.setStyleSheet("QLabel\n"
-"{\n"
-" qproperty-alignment: \'AlignVCenter | AlignRight\';\n"
-" \n"
-"\n"
-"}\n"
-" background-color: white; ")
+                                        "{\n"
+                                        " qproperty-alignment: \'AlignVCenter | AlignRight\';\n"
+                                        " \n"
+                                        "\n"
+                                        "}\n"
+                                        " background-color: white; ")
         self.label_output.setObjectName("label_output")
 
         self.retranslateUi(Calcalator)

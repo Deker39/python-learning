@@ -161,7 +161,6 @@ def pushbutton_two():
         print('x:',x )
 
         quest = templates["test"]["quests"]
-        # print(len(templates["test"]["quests"]))
         if x >= len(templates["test"]["quests"]):
             Dialog3.close()
             Dialog1.show()
@@ -171,9 +170,31 @@ def pushbutton_two():
             ui3.radioButton.setText(str(answer[0]))
             ui3.radioButton_2.setText(str(answer[1]))
             ui3.radioButton_3.setText(str(answer[2]))
+        if x == len(templates["test"]["quests"]):
+            ui3.pushButton.setText("ЗАВЕРШИТЬ")
 
-    ui3.pushButton.clicked.connect(output)
 
+
+    def radio_answer_user():
+        json_file = '{0}.json'.format(input_chois_test())
+        with open(json_file) as f:
+            templates = json.load(f)
+        answer = templates["test"]['answer'][x]
+        user_answer = []
+        if ui3.radioButton.isChecked() == True:
+            user_answer.append(answer[0])
+        elif ui3.radioButton_2.isChecked() == True:
+            user_answer.append(answer[1])
+        elif ui3.radioButton_3.isChecked() == True:
+            user_answer.append(answer[2])
+        print(user_answer)
+
+    def kek():
+        output()
+        # radio_answer_user()
+
+    ui3.pushButton.clicked.connect(kek)
+    # ui3.pushButton.clicked.connect(radio_answer_user)
 def pushbutton_three():
     pass
 

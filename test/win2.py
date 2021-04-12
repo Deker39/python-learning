@@ -18,6 +18,9 @@ class Ui_Win2(object):
         Win2.setEnabled(True)
         # Win2.resize(500, 400)
         Win2.setFixedSize(500, 400)
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
+        Win2.setWindowIcon(icon)
         sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Ignored, QtWidgets.QSizePolicy.Ignored)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
@@ -152,5 +155,6 @@ class Ui_Win2(object):
         self.label_answer.setText(_translate("Win2", "Ответы:"))
         self.label_true_answer.setText(_translate("Win2", "Правильный ответ:"))
         self.button_add.setText(_translate("Win2", "ДОБАВИТЬ"))
+
 
 

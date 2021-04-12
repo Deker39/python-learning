@@ -11,9 +11,9 @@ solar_system = {"Sun": 30,"Mercury":4.87,"Venus":12.10,
                 "Earth":12.72,"Mars":6.77,"Jupiter":139.82,
                 "Saturn":116.46,"Uranus":50.72,"Neptune":49.24}
 
-solar_system_1 = [30,4.87,12.10,12.72,6.77,139.82,116.46,50.72,49.24]
+# solar_system_1 = [30,4.87,12.10,12.72,6.77,139.82,116.46,50.72,49.24]
 
-solar_system_distance= [0,20,36,50,76,260,475,600,750,0]
+solar_system_distance= [0,20,36,50,76,150,269,400,475,0]
 solar_system_colors= ["#ffcc00","#8585ad","#ff6600","#6699ff",
                       "#804000","#ff9933","#ff9966","#ff8000",
                       "#1a53ff"]

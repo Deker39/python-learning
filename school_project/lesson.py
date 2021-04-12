@@ -598,10 +598,11 @@ import json
 # ui3.radioButton.setText(str(answer[x]))
 # ui3.radioButton_2.setText(str(answer[x+1]))
 # ui3.radioButton_3.setText(str(answer[x+2]))
+#
+# def on_click(i):
+#   i = i + 1
+#   print("i:",i)
+# x = 11
+# on_click(x)
+# print("x: ",x)
 
-def on_click(i):
-  i = i + 1
-  print("i:",i)
-x = 11
-on_click(x)
-print("x: ",x)

@@ -15,11 +15,7 @@ class Ui_Win3(object):
     def setupUi(self, Win3):
         Win3.setObjectName("Win3")
         Win3.setEnabled(True)
-        Win3.setFixedSize(520, 380)
-        # Win3.resize(520, 380)
-        icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("logo.png"), QtGui.QIcon.Normal, QtGui.QIcon.Off)
-        Win3.setWindowIcon(icon)
+        Win3.resize(520, 380)
         Win3.setStyleSheet("background-color:    #e6ffff")
         self.verticalLayoutWidget = QtWidgets.QWidget(Win3)
         self.verticalLayoutWidget.setGeometry(QtCore.QRect(0, 0, 521, 381))
@@ -149,3 +145,12 @@ class Ui_Win3(object):
         self.radioButton_3.setText(_translate("Win3", "1"))
         self.pushButton.setText(_translate("Win3", "ДАЛЬШЕ"))
 
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    Win3 = QtWidgets.QDialog()
+    ui = Ui_Win3()
+    ui.setupUi(Win3)
+    Win3.show()
+    sys.exit(app.exec_())
