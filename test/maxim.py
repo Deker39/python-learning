@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+
 import sys
 import json
 import os
@@ -9,6 +11,9 @@ from win1 import  Ui_Win1
 from win2 import  Ui_Win2
 from  win3 import  Ui_Win3
 from  win4 import  Ui_Win4
+
+x = 0
+i = 0
 
 app = QtWidgets.QApplication(sys.argv)
 Dialog1 = QtWidgets.QDialog()
@@ -118,7 +123,10 @@ def push_button_two():
         Dialog1.show()
 
     def push_button_next():
-        pass
+        output()
+        user_answer_radiobutton()
+
+
         # Dialog3.close()
         # Dialog1.show()
 
@@ -127,16 +135,63 @@ def push_button_two():
         with open(json_file) as f:
             templates = json.load(f)
 
-        print(templates['test']['quests'][3])
-        print(templates['test']['answer'][3][0])
-        print(templates['test']['true_answer'][3])
+        global x
 
-        # quest = templates["test"]["quests"]
-        # answer = templates["test"]['answer'][x]
+        if x >= len(templates['test']['quests']):
+            Dialog3.close()
+            Dialog1.show()
+        else:
+            ui3.label_2.setText(templates['test']['quests'][x])
+            answer = templates['test']['answer'][x]
+            ui3.radioButton.setText(answer[0])
+            ui3.radioButton_2.setText(answer[1])
+            ui3.radioButton_3.setText(answer[2])
 
+        x += 1
+        if x == len(templates["test"]["quests"]):
+            ui3.pushButton.setText("ЗАВЕРШИТЬ")
+
+    def user_answer_radiobutton():
+        json_file = '{0}.json'.format(input_chois_test())
+        with open(json_file) as f:
+            templates = json.load(f)
+
+        global i
+
+        answer = templates["test"]['answer'][i]
+        user_answer = []
+        if ui3.radioButton.isChecked():
+            print(answer[0])
+            user_answer.append(answer[0])
+        elif ui3.radioButton_2.isChecked():
+            print(answer[1])
+            user_answer.append(answer[1])
+        elif ui3.radioButton_3.isChecked():
+            print(answer[2])
+            user_answer.append(answer[2])
+        i += 1
+
+        to_json = {'user_answer': user_answer}
+
+        json_file  = '{0}_answer.json'.format(input_chois_test())
+        # каждый раз удалять файл
+        #
+        if os.path.isfile(json_file) and os.access(json_file,os.R_OK):
+            with open(json_file) as f:
+                data = json.load(f)
+
+            data['user_answer'].extend(user_answer)
+            print(data)
+
+            with open(json_file, 'w') as f:
+                json.dump(data, f,sort_keys=True, indent=3,ensure_ascii=False )
+        else:
+            with open(json_file, 'w') as f:
+                json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
 
     ui4.ok_button.clicked.connect(push_button_ok)
     ui4.cancel_button.clicked.connect(push_button_cancle)
+
 
     ui3.pushButton.clicked.connect(push_button_next)
 
