@@ -122,19 +122,19 @@ class Ui_Win3(object):
         font.setPointSize(12)
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton{\n"
-                                      "    color:#006080;\n"
-                                      "    background-color:#ccf2ff;\n"
-                                      "    border: none;\n"
-                                      "    \n"
-                                      "}\n"
-                                      "QPushButton:hover{\n"
-                                      "    color:#ffd9b3;\n"
-                                      "    background-color:#006080;\n"
-                                      "}\n"
-                                      "QPushButton:pressed{\n"
-                                      "    color:#ff9933;\n"
-                                      "    background-color:#006080;\n"
-                                      "}")
+"    color:#006080;\n"
+"    background-color:#ccf2ff;\n"
+"    border: none;\n"
+"    \n"
+"}\n"
+"QPushButton:hover{\n"
+"    color:#ffd9b3;\n"
+"    background-color:#006080;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"    color:#ff9933;\n"
+"    background-color:#006080;\n"
+"}")
         self.pushButton.setObjectName("pushButton")
         self.verticalLayout.addWidget(self.pushButton)
         self.verticalLayout.setStretch(0, 3)

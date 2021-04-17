@@ -6,6 +6,7 @@ from PyQt5.QtWidgets import (QWidget, QPushButton, QLineEdit,
                              QInputDialog, QApplication)
 
 x = 0
+i = 0
 
 from win1 import  Ui_Win1
 from win2 import  Ui_Win2
@@ -138,6 +139,7 @@ def pushbutton_two():
         Dialog4.close()
         Dialog3.show()
         output()
+        # radio_answer_user()
         # output()
 
     # Нажатие "cancel" возрат на первое окно
@@ -157,9 +159,9 @@ def pushbutton_two():
             templates = json.load(f)
         # счетчик
         global x
-        x += 1
-        print('x:',x )
-
+        global i
+        # x += 1
+        # print('x:',x )
         quest = templates["test"]["quests"]
         if x >= len(templates["test"]["quests"]):
             Dialog3.close()
@@ -170,28 +172,73 @@ def pushbutton_two():
             ui3.radioButton.setText(str(answer[0]))
             ui3.radioButton_2.setText(str(answer[1]))
             ui3.radioButton_3.setText(str(answer[2]))
-        if x == len(templates["test"]["quests"]):
-            ui3.pushButton.setText("ЗАВЕРШИТЬ")
+            # ui3.label.setText("Aline")
+            #
+            # if ui3.radioButton.isChecked():
+            #     print(str(answer[0]))
+            #     user_answer.append(str(answer[0]))
+            # elif ui3.radioButton_2.isChecked():
+            #     print(str(answer[1]))
+            #     user_answer.append(str(answer[1]))
+            # elif ui3.radioButton_3.isChecked():
+            #     print(str(answer[2]))
+            #     user_answer.append(str(answer[2]))
 
 
+            # последний елемент должен пооказать завершить
+            if x == len(templates["test"]["quests"]):
+                ui3.pushButton.setText("ЗАВЕРШИТЬ")
+            x += 1
+            print('x:',x )
+        # print(user_answer)
 
     def radio_answer_user():
         json_file = '{0}.json'.format(input_chois_test())
         with open(json_file) as f:
             templates = json.load(f)
-        answer = templates["test"]['answer'][x]
+        global i
+        answer = templates["test"]['answer'][i]
         user_answer = []
-        if ui3.radioButton.isChecked() == True:
+        # надо сохранять выбор пользователя в список
+        # и передавать его в новый json
+        # который будет использоваться в win5
+        # if i >= len(templates["test"]["quests"]):
+        #     Dialog3.close()
+        #     Dialog1.show()
+        # else:
+        if ui3.radioButton.isChecked():
+            print(answer[0])
             user_answer.append(answer[0])
-        elif ui3.radioButton_2.isChecked() == True:
+        elif ui3.radioButton_2.isChecked():
+            print(answer[1])
             user_answer.append(answer[1])
-        elif ui3.radioButton_3.isChecked() == True:
+        elif ui3.radioButton_3.isChecked():
+            print(answer[2])
             user_answer.append(answer[2])
-        print(user_answer)
+        print('i:',i )
+        i += 1
+        to_json = {'user_answer': user_answer}
+        json_file = 'answer1.json'
+        if os.path.isfile(json_file) and os.access(json_file,os.R_OK):
+            with open(json_file) as f:
+                data = json.load(f)
+
+            data['user_answer'].extend( user_answer)
+            print(data)
+
+            with open(json_file, 'w') as f:
+                json.dump(data, f,sort_keys=True, indent=3,ensure_ascii=False )
+
+        else:
+            with open(json_file, 'w') as f:
+                json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
+
 
     def kek():
+        # pass
+        radio_answer_user()
         output()
-        # radio_answer_user()
+
 
     ui3.pushButton.clicked.connect(kek)
     # ui3.pushButton.clicked.connect(radio_answer_user)

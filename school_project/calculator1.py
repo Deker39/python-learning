@@ -2,17 +2,15 @@ from PyQt5 import QtWidgets
 from school_project.view_calculator import Ui_Calcalator
 import sys
 
-
-
 app = QtWidgets.QApplication(sys.argv)
 Calcalator = QtWidgets.QDialog()
 ui = Ui_Calcalator()
 ui.setupUi(Calcalator)
 Calcalator.show()
 
-
 def click(num):
     display(text=num)
+    print(num)
 
 def clear():
     obj = ui.label_output

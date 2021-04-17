@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20d61652-4fea-46f4-9433-7b2e0a302fd1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/school_project/calculator1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/school_project/png-clipart-macos-app-icons-calculator.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/win3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/answer1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/winn2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school_project/calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/school_project/calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school_project/lesson.py" beforeDir="false" afterPath="$PROJECT_DIR$/school_project/lesson.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school_project/solar_system.py" beforeDir="false" afterPath="$PROJECT_DIR$/school_project/solar_system.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/school_project/tests123.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/school_project/view_calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/school_project/view_calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/maxim.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/maxim.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/tests1.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/school_project/calculator1.py" beforeDir="false" afterPath="$PROJECT_DIR$/school_project/calculator1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/tests2.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/win1_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win1_contrl.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/win2.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win2.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/win3.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/win4.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win4.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/untitled_answer.ui" beforeDir="false" afterPath="$PROJECT_DIR$/untitled_answer.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -191,7 +182,7 @@
       <recent name="C:\Users\bigti\Desktop\python_learning\vlad_derkach" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.calculator1">
+  <component name="RunManager" selected="Python.win1_contrl">
     <configuration name="calculator" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kek" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -255,27 +246,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="solar_system" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="kek" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/school_project" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/school_project/solar_system.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="solar_system1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kek" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -297,13 +267,34 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="win1_contrl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kek" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/win1_contrl.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.win1_contrl" />
         <item itemvalue="Python.calculator1" />
         <item itemvalue="Python.colculater_controller" />
         <item itemvalue="Python.calculator" />
         <item itemvalue="Python.solar_system1" />
-        <item itemvalue="Python.solar_system" />
       </list>
     </recent_temporary>
   </component>
@@ -368,7 +359,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618062611012</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="переписал калькулятор">
+      <created>1618256284356</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1618256284356</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -443,7 +441,8 @@
     <MESSAGE value="сделал второе окно" />
     <MESSAGE value="для максима" />
     <MESSAGE value="счетчик заработал" />
-    <option name="LAST_COMMIT_MESSAGE" value="счетчик заработал" />
+    <MESSAGE value="переписал калькулятор" />
+    <option name="LAST_COMMIT_MESSAGE" value="переписал калькулятор" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/The Antennae Galaxies in Collision_2020-12-03.jpg" />
