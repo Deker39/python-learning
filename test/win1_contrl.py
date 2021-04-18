@@ -4,8 +4,7 @@ import sys
 import json
 import os
 from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import (QWidget, QPushButton, QLineEdit,
-                             QInputDialog, QApplication)
+from termcolor import colored
 
 x = 0
 i = 0
@@ -250,6 +249,7 @@ def pushbutton_three():
     def pushbutton_return_one_ok():
         Dialog4.close()
         Dialog5.show()
+        out()
 
 
     # Нажатие "cancel" возрат на первое окно
@@ -261,7 +261,44 @@ def pushbutton_three():
     ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
     def out():
-       pass
+
+        new_x = []
+        numbers_user_true_answer = 0
+
+        json_file  = '{0}.json'.format(input_chois_test())
+        with open(json_file) as f:
+            templates_one = json.load(f)
+        json_file_answer  = '{0}_answer.json'.format(input_chois_test())
+        with open(json_file_answer) as f:
+            templates_two = json.load(f)
+
+        print(json_file,"\n",json_file_answer)
+
+        for y in range(len(templates_one['test']['quests'])):
+            if templates_two['user_answer'][y] == templates_one['test']['true_answer'][y]:
+                new_x.append(templates_two['user_answer'][y])
+                numbers_user_true_answer +=1
+        print(new_x)
+
+        for y in range(len(templates_one['test']['true_answer'])):
+            if templates_two['user_answer'][y] == templates_one['test']['true_answer'][y]:
+                print(colored(templates_one['test']['quests'][y],'green'))
+            else:
+                print(colored(templates_one['test']['quests'][y],'red'))
+
+        print("сколько правильнх: ",numbers_user_true_answer,"/",len(templates_one['test']['answer']))
+        for y in range(len(new_x)):
+            print("правильный ответ",new_x[y])
+        # print("правильный ответ",new_x[:])
+        ui5.listWidget.item(0).setText(input_chois_test())
+        # for y in range(1,len(templates_one['test']['quests'])):
+        ui5.listWidget.item(1).setText(templates_one['test']['quests'][0])
+        ui5.listWidget.item(2).setText(str("сколько правильнх: {0}/{1}")
+                                       .format(numbers_user_true_answer,len(templates_one['test']['answer'])))
+        ui5.listWidget.item(3).setText(str("правильный ответ {0}".format(new_x)))
+
+
+
 
     def close_view():
         Dialog5.close()
