@@ -2,10 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="20d61652-4fea-46f4-9433-7b2e0a302fd1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/test/test1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/test1_answer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/tests1.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/test/tests2.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests2.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test/tests2_answer.json" beforeDir="false" afterPath="$PROJECT_DIR$/test/tests2_answer.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/win1_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win1_contrl.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/win1_contrl.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/controller.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test/win5.py" beforeDir="false" afterPath="$PROJECT_DIR$/test/win5.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/untitled_view.ui" beforeDir="false" afterPath="$PROJECT_DIR$/untitled_view.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/win5.py" beforeDir="false" afterPath="$PROJECT_DIR$/win5.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -178,7 +185,28 @@
       <recent name="C:\Users\bigti\Desktop\python_learning\vlad_derkach" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.win1_contrl">
+  <component name="RunManager" selected="Python.controllerpy">
+    <configuration name="controller" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="kek" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="C:\Users\bigti\Desktop\python_learning\test\controller.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="maxim" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="kek" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -213,27 +241,6 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_read.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="win1_contrl" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="kek" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test/win1_contrl.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -286,7 +293,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.win1_contrl" />
+        <item itemvalue="Python.controllerpy" />
         <item itemvalue="Python.win5 (1)" />
         <item itemvalue="Python.win5" />
         <item itemvalue="Python.test_read" />
@@ -376,7 +383,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618688906079</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="тертья view почти работает">
+      <created>1618740313203</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1618740313204</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView">
@@ -454,7 +468,8 @@
     <MESSAGE value="переписал калькулятор" />
     <MESSAGE value="подключил радиобатон такая ебала," />
     <MESSAGE value="тертья кнопка работает но логики нету" />
-    <option name="LAST_COMMIT_MESSAGE" value="тертья кнопка работает но логики нету" />
+    <MESSAGE value="тертья view почти работает" />
+    <option name="LAST_COMMIT_MESSAGE" value="тертья view почти работает" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/The Antennae Galaxies in Collision_2020-12-03.jpg" />

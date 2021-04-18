@@ -199,19 +199,22 @@ def pushbutton_two():
         to_json = {'user_answer': user_answer}
 
         json_file  = '{0}_answer.json'.format(input_chois_test())
-        if os.path.isfile(json_file) and os.access(json_file,os.R_OK):
-            with open(json_file) as f:
-                data = json.load(f)
-
-            data['user_answer'].extend( user_answer)
-            print(data)
-
-            with open(json_file, 'w') as f:
-                json.dump(data, f,sort_keys=True, indent=3,ensure_ascii=False )
-
-        else:
-            with open(json_file, 'w') as f:
-                json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
+        #косяка уже нету, но я не пойму как работает
+        with open(json_file, 'w') as f:
+            json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
+        # if os.path.isfile(json_file) and os.access(json_file,os.R_OK):
+        #     with open(json_file) as f:
+        #         data = json.load(f)
+        #     # здесь косяк
+        #     data['user_answer'].extend( user_answer)
+        #     print(data)
+        #
+        #     with open(json_file, 'w') as f:
+        #         json.dump(data, f,sort_keys=True, indent=3,ensure_ascii=False )
+        #
+        # else:
+        #     with open(json_file, 'w') as f:
+        #         json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
 
 
     def push_button_next():
@@ -289,15 +292,32 @@ def pushbutton_three():
         print("сколько правильнх: ",numbers_user_true_answer,"/",len(templates_one['test']['answer']))
         for y in range(len(new_x)):
             print("правильный ответ",new_x[y])
-        # print("правильный ответ",new_x[:])
-        ui5.listWidget.item(0).setText(input_chois_test())
-        # for y in range(1,len(templates_one['test']['quests'])):
-        ui5.listWidget.item(1).setText(templates_one['test']['quests'][0])
-        ui5.listWidget.item(2).setText(str("сколько правильнх: {0}/{1}")
+
+        # вывод названия теста
+        ui5.listWidget.addItem(input_chois_test())
+        ui5.listWidget.item(0).setTextAlignment(QtCore.Qt.AlignCenter)
+        #  вывод вопросов зеленый красный
+        for y in range(0,len(templates_one['test']['quests'])):
+            if templates_two['user_answer'][y] == templates_one['test']['true_answer'][y]:
+                ui5.listWidget.addItem(str(templates_one['test']['quests'][y]))
+                ui5.listWidget.item(y+1).setForeground(QtGui.QColor("green"))
+            else:
+                ui5.listWidget.addItem(str(templates_one['test']['quests'][y]))
+                ui5.listWidget.item(y+1).setForeground(QtGui.QColor("red"))
+
+        # правильные ответы
+        for y in range(0,len(templates_one['test']['true_answer'])):
+            if templates_two['user_answer'][y] == templates_one['test']['true_answer'][y]:
+                ui5.listWidget.addItem(str("Правильный ответ: {0}".format(templates_two['user_answer'][y])))
+            else:
+                ui5.listWidget.addItem(str("Не правильный ответ: {0}".format(templates_two['user_answer'][y])))
+
+        # вывод количества правильных ответов
+        ui5.listWidget.addItem(str("Сколько правильных: {0}/{1}")
                                        .format(numbers_user_true_answer,len(templates_one['test']['answer'])))
-        ui5.listWidget.item(3).setText(str("правильный ответ {0}".format(new_x)))
-
-
+        # правильные ответы
+        # for y in range(len(new_x)):
+            # ui5.listWidget.addItem(str("Правильный ответ: {0}".format(new_x[y])))
 
 
     def close_view():
