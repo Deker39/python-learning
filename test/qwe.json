@@ -1,0 +1,17 @@
+{
+   "test": {
+      "answer": [
+         [
+            "rw",
+            "r",
+            "w"
+         ]
+      ],
+      "quests": [
+         "qwr"
+      ],
+      "true_answer": [
+         "w"
+      ]
+   }
+}

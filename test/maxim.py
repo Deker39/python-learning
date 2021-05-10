@@ -9,8 +9,9 @@ from PyQt5.QtWidgets import (QWidget, QPushButton, QLineEdit,
 
 from win1 import  Ui_Win1
 from win2 import  Ui_Win2
-from  win3 import  Ui_Win3
-from  win4 import  Ui_Win4
+from win3 import  Ui_Win3
+from win4 import  Ui_Win4
+from win5 import  Ui_Win5
 
 x = 0
 i = 0
@@ -126,10 +127,6 @@ def push_button_two():
         output()
         user_answer_radiobutton()
 
-
-        # Dialog3.close()
-        # Dialog1.show()
-
     def output():
         json_file = '{0}.json'.format(input_chois_test())
         with open(json_file) as f:
@@ -192,16 +189,74 @@ def push_button_two():
     ui4.ok_button.clicked.connect(push_button_ok)
     ui4.cancel_button.clicked.connect(push_button_cancle)
 
-
     ui3.pushButton.clicked.connect(push_button_next)
 
-
 def push_button_three ():
-    print("Нажал кнопу три")
+    global Dialog4
+    global Dialog5
+
+    Dialog5 = QtWidgets.QDialog()
+    ui5 = Ui_Win5()
+    ui5.setupUi(Dialog5)
+
+    Dialog4 = QtWidgets.QDialog()
+    ui4 = Ui_Win4()
+    ui4.setupUi(Dialog4)
+
+    Dialog1.close()
+    Dialog4.show()
+
+    def input_chois_test():
+        chois_test = ui4.edit_test.text()
+        return  chois_test
+
+    def push_button_ok ():
+        decision()
+        Dialog4.close()
+        Dialog5.show()
+
+    def push_button_cancle ():
+        Dialog4.close()
+        Dialog1.show()
+
+    ui4.ok_button.clicked.connect(push_button_ok)
+    ui4.cancel_button.clicked.connect(push_button_cancle)
+
+    def decision():
+
+        numbers_user_true_answer = 0
+
+        json_file  = '{0}.json'.format(input_chois_test())
+        with open(json_file) as f:
+            templates_one = json.load(f)
+
+        json_file_answer  = '{0}_answer.json'.format(input_chois_test())
+        with open(json_file_answer) as f:
+            templates_two = json.load(f)
+
+        ui5.listWidget.addItem(input_chois_test())
+        ui5.listWidget.item(0).setTextAlignment(QtCore.Qt.AlignCenter)
+
+        for y in range(len(templates_one['test']['quests'])):
+            if templates_two['user_answer'][y] == templates_one['test']['true_answer'][y]:
+                ui5.listWidget.addItem(templates_one['test']['quests'][y])
+                ui5.listWidget.item(y+1).setForeground(QtGui.QColor("green"))
+                numbers_user_true_answer +=1
+            else:
+                ui5.listWidget.addItem(templates_one['test']['quests'][y])
+                ui5.listWidget.item(y+1).setForeground(QtGui.QColor("red"))
+
+        ui5.listWidget.addItem("Правильных ответов: {0}/{1}".
+                               format(numbers_user_true_answer,len(templates_one['test']['answer'])))
+
+    def close_view():
+        Dialog5.close()
+        Dialog1.show()
+
+    ui5.pushButton_2.clicked.connect(close_view)
 
 ui1.add_button.clicked.connect(push_button_one)
 ui1.decide_button.clicked.connect(push_button_two)
 ui1.look_button.clicked.connect(push_button_three)
-
 
 sys.exit(app.exec_())

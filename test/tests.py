@@ -21,51 +21,38 @@ app = QtWidgets.QApplication(sys.argv)
 Dialog1 = QtWidgets.QDialog()
 ui1 = Ui_Win1()
 ui1.setupUi(Dialog1)
-
-
 Dialog1.show()
 
-
 def pushbutton_one():
-    #без этого окна не открываються, гы
     global Dialog2
     global Dialog4
-    global chois_test
 
-    # запуск вин2
     Dialog2 = QtWidgets.QDialog()
     ui2 = Ui_Win2()
     ui2.setupUi(Dialog2)
 
-    #  запуск вин4
     Dialog4 = QtWidgets.QDialog()
     ui4 = Ui_Win4()
     ui4.setupUi(Dialog4)
-    # закрытие первого окна открытие четвертого
+
     Dialog1.close()
     Dialog4.show()
 
-    # # запись и возрать название теста(json file)
     def input_chois_test():
         chois_test = ui4.edit_test.text()
         return  chois_test
 
-    #  Нажатие "ok" , переход на второе окно
     def pushbutton_return_one_ok():
         # input_chois_test()
         Dialog4.close()
         Dialog2.show()
 
-    # Нажатие "cancel" возрат на первое окно
     def pushbutton_return_one_cancle():
         Dialog4.close()
         Dialog1.show()
 
-    # Подключение кнопок
-    ui4.ok_button.clicked.connect(pushbutton_return_one_ok)
-    ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
-    # Ввод вопроса и фооматирование его под json file
+
     def input_question():
         question = []
         answer = []
@@ -105,62 +92,53 @@ def pushbutton_one():
             with open(json_file, 'w') as f:
                 json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
 
-    # Нажатие "дабвить", сохранение json file и преход на первое окно
-    def pushbutton_return_add():
-        input_question()
+    def pushbutton_return():
         Dialog2.close()
         Dialog1.show()
+        input_question()
 
-    # Подключение кнопоки
-    ui2.button_add.clicked.connect(pushbutton_return_add)
+    ui2.button_add.clicked.connect(pushbutton_return)
+
+    ui4.ok_button.clicked.connect(pushbutton_return_one_ok)
+    ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
 def pushbutton_two():
     global Dialog3
     global Dialog4
-    global chois_test
 
-    #  запуск вин3
     Dialog3 = QtWidgets.QDialog()
     ui3 = Ui_Win3()
     ui3.setupUi(Dialog3)
 
-    #  запуск вин4
     Dialog4 = QtWidgets.QDialog()
     ui4 = Ui_Win4()
     ui4.setupUi(Dialog4)
-    # закрытие первого окна открытие четвертого
+
     Dialog1.close()
     Dialog4.show()
 
-    # запись и возрать название теста(json file)
     def input_chois_test():
         chois_test = ui4.edit_test.text()
         return  chois_test
 
-    #  Нажатие "ok" , переход на второе окно
     def pushbutton_return_one_ok():
         Dialog4.close()
         Dialog3.show()
         output()
-        # radio_answer_user()
-        # output()
 
-    # Нажатие "cancel" возрат на первое окно
     def pushbutton_return_one_cancle():
-        # input_chois_test()
         Dialog4.close()
         Dialog1.show()
 
-    # Подключение кнопок
-    ui4.ok_button.clicked.connect(pushbutton_return_one_ok)
-    ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
-
+    def pushbutton_return():
+        radio_answer_user()
+        output()
 
     def output():
         json_file = '{0}.json'.format(input_chois_test())
         with open(json_file) as f:
             templates = json.load(f)
-        # счетчик
+
         global x
 
         if x >= len(templates["test"]["quests"]):
@@ -174,10 +152,8 @@ def pushbutton_two():
             ui3.radioButton_3.setText(str(templates["test"]['answer'][x][2]))
 
         x += 1
-        # последний елемент должен пооказать завершить
         if x == len(templates["test"]["quests"]):
             ui3.pushButton.setText("ЗАВЕРШИТЬ")
-
 
     def radio_answer_user():
         json_file = '{0}.json'.format(input_chois_test())
@@ -199,45 +175,24 @@ def pushbutton_two():
         print('i:',i )
         i += 1
         to_json = {'user_answer': user_answer}
-
         json_file  = '{0}_answer.json'.format(input_chois_test())
-        #косяка уже нету, но я не пойму как работает
+
         with open(json_file, 'w') as f:
             json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
-        # if os.path.isfile(json_file) and os.access(json_file,os.R_OK):
-        #     with open(json_file) as f:
-        #         data = json.load(f)
-        #     # здесь косяк
-        #     data['user_answer'].extend( user_answer)
-        #     print(data)
-        #
-        #     with open(json_file, 'w') as f:
-        #         json.dump(data, f,sort_keys=True, indent=3,ensure_ascii=False )
-        #
-        # else:
-        #     with open(json_file, 'w') as f:
-        #         json.dump(to_json, f,sort_keys=True, indent=3,ensure_ascii=False )
 
+    ui3.pushButton.clicked.connect(pushbutton_return)
 
-    def push_button_next():
-        # pass
-        radio_answer_user()
-        output()
-
-
-    ui3.pushButton.clicked.connect(push_button_next)
-    # ui3.pushButton.clicked.connect(radio_answer_user)
+    ui4.ok_button.clicked.connect(pushbutton_return_one_ok)
+    ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
 def pushbutton_three():
     global Dialog5
     global Dialog4
 
-    #  запуск вин5
     Dialog5 = QtWidgets.QDialog()
     ui5 = Ui_Win5()
     ui5.setupUi(Dialog5)
 
-    #  запуск вин4
     Dialog4 = QtWidgets.QDialog()
     ui4 = Ui_Win4()
     ui4.setupUi(Dialog4)
@@ -245,26 +200,24 @@ def pushbutton_three():
     Dialog1.close()
     Dialog4.show()
 
-    # запись и возрать название теста(json file)
     def input_chois_test():
         chois_test = ui4.edit_test.text()
         return  chois_test
 
-    #  Нажатие "ok" , переход на второе окно
     def pushbutton_return_one_ok():
         Dialog4.close()
         Dialog5.show()
-        out()
+        decision()
 
-    # Нажатие "cancel" возрат на первое окно
     def pushbutton_return_one_cancle():
         Dialog4.close()
         Dialog1.show()
-    # Подключение кнопок
-    ui4.ok_button.clicked.connect(pushbutton_return_one_ok)
-    ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
-    def out():
+    def pushbutton_return():
+        Dialog5.close()
+        Dialog1.show()
+
+    def decision():
 
         new_x = []
         numbers_user_true_answer = 0
@@ -295,7 +248,7 @@ def pushbutton_three():
                 ui5.listWidget.addItem(str(templates_one['test']['quests'][y]))
                 ui5.listWidget.item(y+1).setForeground(QtGui.QColor("red"))
 
-        # правильные ответыc
+        # правильные ответы
         for y in range(0,len(templates_one['test']['true_answer'])):
             if templates_two['user_answer'][y] == templates_one['test']['true_answer'][y]:
                 ui5.listWidget.addItem(str("Правильный ответ: {0}".format(templates_two['user_answer'][y])))
@@ -304,18 +257,46 @@ def pushbutton_three():
 
         # вывод количества правильных ответов
         ui5.listWidget.addItem(str("Правильных ответов {0}/{1}")
-                                       .format(numbers_user_true_answer,len(templates_one['test']['answer'])))
+                               .format(numbers_user_true_answer,len(templates_one['test']['answer'])))
 
 
-    def close_view():
-        Dialog5.close()
-        Dialog1.show()
 
-    ui5.pushButton_2.clicked.connect(close_view)
+    ui5.pushButton_2.clicked.connect(pushbutton_return)
 
+    ui4.ok_button.clicked.connect(pushbutton_return_one_ok)
+    ui4.cancel_button.clicked.connect(pushbutton_return_one_cancle)
 
 ui1.add_button.clicked.connect(pushbutton_one)
 ui1.decide_button.clicked.connect(pushbutton_two)
 ui1.look_button.clicked.connect(pushbutton_three)
 
 sys.exit(app.exec_())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
